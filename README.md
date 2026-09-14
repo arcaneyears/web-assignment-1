@@ -3,7 +3,7 @@
 A personal webpage built with plain HTML and CSS for the Web Technologies course
 at Astana IT University.
 
-**Author:** Yersain Taubay
+**Author:** Yersaiyn Taubay
 **Group:** SE2524
 
 ## Live demo
