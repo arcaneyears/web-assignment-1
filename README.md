@@ -18,7 +18,7 @@ https://zippy-eclair-b2c532.netlify.app/
 ├── task2.html          # placeholder page for the next task
 ├── styles.css          # all styling for every page
 ├── images/
-│   └── profile.svg     # profile picture (replace with your own photo)
+│   └── profile.jpg     # profile picture
 └── README.md
 ```
 
