@@ -8,8 +8,7 @@ at Astana IT University.
 
 ## Live demo
 
-<!-- Replace this with your real GitHub Pages / Netlify URL after publishing -->
-https://<your-username>.github.io/<your-repo>/
+https://arcaneyears.github.io/web-assignment-1/
 
 ## Project structure
 
@@ -52,8 +51,8 @@ https://<your-username>.github.io/<your-repo>/
 No build step and no dependencies — just open the file:
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/arcaneyears/web-assignment-1.git
+cd web-assignment-1
 xdg-open index.html      # macOS: open index.html
 ```
 
@@ -64,4 +63,4 @@ xdg-open index.html      # macOS: open index.html
 3. Under *Build and deployment*, choose **Deploy from a branch**.
 4. Select branch `main` and folder `/ (root)`, then press **Save**.
 5. After a minute the site is available at
-   `https://<your-username>.github.io/<your-repo>/`.
+   `https://arcaneyears.github.io/web-assignment-1/`.
