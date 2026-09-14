@@ -8,7 +8,7 @@ at Astana IT University.
 
 ## Live demo
 
-https://arcaneyears.github.io/web-assignment-1/
+https://zippy-eclair-b2c532.netlify.app/
 
 ## Project structure
 
