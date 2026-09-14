@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 — Introduction to HTML &amp; CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Navigation bar ===== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">Yersain<span>.dev</span></a>
+      <ul class="nav-links">
+        <li><a class="nav-link active" href="index.html">Task 1</a></li>
+        <li><a class="nav-link" href="task2.html">Task 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== Hero heading ===== -->
+    <section class="hero">
+      <h1 id="page-title">Introduction to HTML &amp; CSS</h1>
+      <p class="subtitle">Assignment&nbsp;#1 — a personal webpage built with plain HTML and CSS.</p>
+    </section>
+
+    <!-- ===== Profile card ===== -->
+    <section class="profile-card">
+      <img class="avatar" src="images/profile.svg"
+           alt="Portrait photo of Yersain Taubay, the author of this page">
+      <div class="profile-info">
+        <h2 class="profile-name">Yersain Taubay</h2>
+        <p class="profile-group">Group: SE2524</p>
+        <p class="profile-bio">
+          Second-year Software Engineering student at Astana IT University.
+          I enjoy building things for the web and I am currently learning
+          front-end development from the ground up.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== About me ===== -->
+    <section class="card">
+      <h2>About me</h2>
+      <p>
+        Hello! My name is Yersain and I study Software Engineering. This page is my
+        very first assignment in web development, and everything you see here is
+        written by hand in a single HTML file with one stylesheet attached to it.
+      </p>
+      <p>
+        I like the fact that the web is one of the few platforms where you can write
+        a few lines of text, open a browser, and immediately see the result. There is
+        no long build step between an idea and something you can click on, which makes
+        experimenting cheap and learning fast.
+      </p>
+      <p>
+        Outside of studying I play chess, read about design, and slowly work through
+        a list of small side projects that I keep in my notes app. Feel free to look
+        around the links below.
+      </p>
+    </section>
+
+    <!-- ===== Ordered list ===== -->
+    <section class="card">
+      <h2>What I learned in this task</h2>
+      <ol class="steps">
+        <li>How to structure a document with semantic HTML tags.</li>
+        <li>How to link an external stylesheet to an HTML page.</li>
+        <li>How the box model works — margin, padding and borders.</li>
+        <li>How element, class and ID selectors differ in specificity.</li>
+        <li>How to make a layout adapt to small screens with media queries.</li>
+      </ol>
+    </section>
+
+    <!-- ===== Unordered list ===== -->
+    <section class="card">
+      <h2>Tools I use</h2>
+      <ul class="tools">
+        <li>Visual Studio Code — my main editor</li>
+        <li>Google Chrome DevTools — for inspecting styles</li>
+        <li>Git and GitHub — version control and hosting</li>
+        <li>Figma — for sketching layouts before coding</li>
+        <li>MDN Web Docs — my reference for everything</li>
+      </ul>
+    </section>
+
+    <!-- ===== Links ===== -->
+    <section class="card">
+      <h2>Useful links</h2>
+      <p>
+        Resources I open almost every day while working on this course:
+      </p>
+      <ul class="tools">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN Web Docs — CSS reference</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools — HTML tutorial</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub — where this project is hosted</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Yersain Taubay — Astana IT University</p>
+  </footer>
+
+</body>
+</html>

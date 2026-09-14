@@ -1,0 +1,286 @@
+/* ===========================================================
+   Assignment #1 — Task 1
+   Selectors used: element (body, h1, a, ul ...),
+                   class (.card, .navbar, .profile-card ...),
+                   ID    (#page-title)
+   =========================================================== */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg:          #f4f6fb;
+  --surface:     #ffffff;
+  --ink:         #1f2430;
+  --ink-muted:   #5b6478;
+  --accent:      #3b5bdb;
+  --accent-soft: #e7ecfd;
+  --border:      #dfe3ee;
+  --radius:      14px;
+}
+
+/* ---------- ELEMENT SELECTORS ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);          /* page background colour */
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+}
+
+p {
+  margin: 0 0 1rem;
+  color: var(--ink-muted);
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* hover effect on every link */
+a:hover {
+  color: #1c3aa9;
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- ID SELECTOR ---------- */
+#page-title {
+  color: var(--ink);
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+
+/* ---------- CLASS SELECTORS ---------- */
+
+/* Navigation bar */
+.site-header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.nav-link:hover {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Page container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+}
+
+/* Generic content card */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Profile card */
+.profile-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 4px solid var(--accent-soft);
+  border-radius: 50%;                   /* rounded image */
+}
+
+.profile-info {
+  min-width: 0;
+}
+
+.profile-name {
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.profile-group {
+  display: inline-block;
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.profile-bio {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.steps li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.tools {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tools li {
+  padding: 0.5rem 0 0.5rem 1.6rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.tools li:last-child {
+  border-bottom: none;
+}
+
+.tools li::before {
+  content: "▸";
+  color: var(--accent);
+  position: absolute;
+  left: 0.25rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--surface);
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .card,
+  .profile-card {
+    padding: 1.15rem;
+  }
+}
