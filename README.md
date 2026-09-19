@@ -1,54 +1,55 @@
 # Assignment #1 — HTML & CSS Basics
 
-A personal webpage built with plain HTML and CSS for the Web Technologies course
-at Astana IT University.
-
 **Author:** Yersaiyn Taubay
 **Group:** SE2524
+**Course:** Web Technologies — Astana IT University
+
+A small static website made with plain HTML and CSS. It contains four pages,
+one for each task of the assignment, linked together by a navigation bar.
 
 ## Live demo
 
 https://zippy-eclair-b2c532.netlify.app/
 
+## Pages
+
+| Page | Task | Description |
+|---|---|---|
+| `index.html` | Task 1 | Personal page with a profile card, lists, image and links |
+| `task2.html` | Task 2 | Two-column layout built only with `div` and `float` (no flexbox, no grid) |
+| `exercise1/index.html` | Task 3 | Tribute page for Nikola Tesla, two Google Fonts |
+| `task4.html` | Task 4 | Styled grade table with merged cells and a feedback form |
+
 ## Project structure
 
 ```
 .
-├── index.html          # Task 1 — personal webpage
-├── task2.html          # placeholder page for the next task
-├── styles.css          # all styling for every page
-├── images/
-│   └── profile.jpg     # profile picture
+├── index.html          # Task 1
+├── styles.css
+├── task2.html          # Task 2
+├── task2.css
+├── task4.html          # Task 4
+├── task4.css
+├── exercise1/          # Task 3
+│   ├── index.html
+│   ├── styles.css
+│   └── images/tesla.jpg
+├── images/profile.jpg
+├── report/report.html  # report with screenshots
 └── README.md
 ```
 
-## What Task 1 contains
+## What each task demonstrates
 
-- `h1` and `h2` headings
-- Three paragraphs of text
-- An ordered list with 5 items and unordered lists with 5 and 3 items
-- An image with an `alt` attribute
-- Three external links with a hover effect
-- A profile card with photo, name, group and short description
-- A navigation bar linking to the separate task pages
-
-## CSS techniques used
-
-| Requirement | Where |
-|---|---|
-| Background colour | `body { background-color: var(--bg) }` |
-| Font family, size, colour | `body`, `h1`, `h2`, `p` |
-| Margin, padding, border | `.card`, `.profile-card`, `.container` |
-| `border-radius` + `max-width` on image | `.avatar`, `img` |
-| Link hover effect | `a:hover`, `.nav-link:hover` |
-| Element selector | `body`, `h1`, `p`, `a`, `img` |
-| Class selector | `.card`, `.navbar`, `.profile-card`, `.tools` |
-| ID selector | `#page-title` |
-| Responsive layout | `@media (max-width: 600px)` |
+- **Task 1** — element, class and ID selectors, background colour, fonts,
+  margins, padding, borders, `border-radius`, hover effect, media query.
+- **Task 2** — page layout with floats, `clear`, box shadows, styled navigation.
+- **Task 3** — Google Fonts, gradient background, centred container,
+  `list-style-type`, styled image and button.
+- **Task 4** — `border-collapse`, `nth-child` striping, `rowspan` / `colspan`,
+  a highlighted row, and a fully styled form.
 
 ## Running locally
-
-No build step and no dependencies — just open the file:
 
 ```bash
 git clone https://github.com/arcaneyears/web-assignment-1.git
@@ -56,11 +57,10 @@ cd web-assignment-1
 xdg-open index.html      # macOS: open index.html
 ```
 
-## Publishing with GitHub Pages
+Or serve the folder so that all relative links work:
 
-1. Push the project to a GitHub repository.
-2. Open **Settings → Pages** in the repository.
-3. Under *Build and deployment*, choose **Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)`, then press **Save**.
-5. After a minute the site is available at
-   `https://arcaneyears.github.io/web-assignment-1/`.
+```bash
+python3 -m http.server 8080
+```
+
+Then open http://localhost:8080 in a browser.

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment #1 — Report</title>
+<style>
+  body { font-family: Georgia, "Times New Roman", serif; max-width: 820px;
+         margin: 0 auto; padding: 2.5rem 1.5rem; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 2rem; margin-bottom: 0.2rem; }
+  h2 { font-size: 1.35rem; margin-top: 2.5rem; border-bottom: 2px solid #3b5bdb;
+       padding-bottom: 0.25rem; color: #23305c; }
+  h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .meta { color: #555; margin-bottom: 2rem; }
+  .meta strong { color: #1a1a1a; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #bbb; padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: #eef1fb; }
+  code { background: #f2f4f9; padding: 0.1rem 0.35rem; border-radius: 3px;
+         font-family: Consolas, Monaco, monospace; font-size: 0.9em; }
+  figure { margin: 1.2rem 0 2rem; }
+  figure img { width: 100%; border: 1px solid #ccc; border-radius: 6px; }
+  figcaption { font-size: 0.88rem; color: #555; margin-top: 0.4rem; font-style: italic; }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.3rem; }
+  @media print { h2 { page-break-after: avoid; } figure { page-break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<h1>Assignment #1 — HTML &amp; CSS Basics</h1>
+<p class="meta">
+  <strong>Student:</strong> Yersaiyn Taubay<br>
+  <strong>Group:</strong> SE2524<br>
+  <strong>University:</strong> Astana IT University<br>
+  <strong>Repository:</strong> <a href="https://github.com/arcaneyears/web-assignment-1">github.com/arcaneyears/web-assignment-1</a><br>
+  <strong>Published site:</strong> <a href="https://zippy-eclair-b2c532.netlify.app/">zippy-eclair-b2c532.netlify.app</a>
+</p>
+
+<h2>Overview</h2>
+<p>
+  The project contains four webpages, one for each task of the assignment. All
+  pages share a navigation bar so the tasks can be reached from any page. The
+  site is written in plain HTML and CSS without any framework or JavaScript,
+  and it is published on Netlify.
+</p>
+
+<table>
+  <tr><th>File</th><th>Task</th><th>What it demonstrates</th></tr>
+  <tr><td><code>index.html</code> + <code>styles.css</code></td><td>Task 1</td>
+      <td>Personal page, profile card, lists, image, links, three selector types</td></tr>
+  <tr><td><code>task2.html</code> + <code>task2.css</code></td><td>Task 2</td>
+      <td>Two-column layout built only with <code>div</code> and <code>float</code></td></tr>
+  <tr><td><code>exercise1/index.html</code> + <code>exercise1/styles.css</code></td><td>Task 3</td>
+      <td>Tribute page, two Google Fonts, styled image and button</td></tr>
+  <tr><td><code>task4.html</code> + <code>task4.css</code></td><td>Task 4</td>
+      <td>Styled table with merged cells and a styled feedback form</td></tr>
+</table>
+
+<h2>Task 1 — Introduction to HTML &amp; CSS</h2>
+<p>
+  A personal page with a heading, three paragraphs, an ordered list of five
+  items, unordered lists, a portrait image with an <code>alt</code> attribute
+  and several links. A profile card shows the photo, name, group and a short
+  description.
+</p>
+<h3>CSS used</h3>
+<ul>
+  <li>Element selector <code>body</code> sets the background colour, font family and size.</li>
+  <li>Class selector <code>.card</code> adds padding, border and rounded corners.</li>
+  <li>ID selector <code>#page-title</code> underlines the main heading.</li>
+  <li>The image uses <code>border-radius: 50%</code>, <code>object-fit: cover</code> and a fixed size.</li>
+  <li><code>a:hover</code> changes link colour and adds an underline.</li>
+  <li>A media query rearranges the profile card on screens under 600&nbsp;px.</li>
+</ul>
+<figure>
+  <img src="screenshots/task1.png" alt="Screenshot of Task 1 page">
+  <figcaption>Figure 1 — Task 1, personal page with the profile card.</figcaption>
+</figure>
+
+<h2>Task 2 — Simple webpage layout</h2>
+<p>
+  The page is divided into a header, a navigation bar with four links, a
+  sidebar, a main content block and a footer. The layout uses only
+  <code>div</code> elements and floats; neither flexbox nor grid appears in
+  <code>task2.css</code>.
+</p>
+<h3>CSS used</h3>
+<ul>
+  <li><code>.sidebar { float: left; width: 28%; }</code> — the left column.</li>
+  <li><code>.aside { float: right; width: 68%; }</code> — the right column.</li>
+  <li><code>.clear { clear: both; }</code> — an empty block that ends the floating
+      so the footer stays at the bottom.</li>
+  <li>Each section has its own background colour, padding, border and
+      <code>box-shadow</code>.</li>
+  <li>Below 600&nbsp;px the floats are switched off and the columns stack.</li>
+</ul>
+<figure>
+  <img src="screenshots/task2.png" alt="Screenshot of Task 2 page">
+  <figcaption>Figure 2 — Task 2, two-column float layout.</figcaption>
+</figure>
+
+<h2>Task 3 — Tribute page</h2>
+<p>
+  A tribute page about Nikola Tesla, placed in the folder
+  <code>exercise1</code>. It contains a heading, a subheading, a summary
+  paragraph, an ordered list of six events, an unordered list of inventions, a
+  portrait and three external links, one of which is styled as a button.
+</p>
+<h3>CSS used</h3>
+<ul>
+  <li>Two fonts loaded from Google Fonts: <em>Playfair Display</em> for headings
+      and <em>Roboto</em> for body text.</li>
+  <li>A vertical <code>linear-gradient</code> as the page background.</li>
+  <li><code>.content { max-width: 760px; margin: 0 auto; }</code> centres the text column.</li>
+  <li>The portrait uses <code>max-width</code>, <code>border-radius</code>,
+      <code>box-shadow</code> and a white border.</li>
+  <li>Lists use <code>list-style-type: upper-roman</code> and <code>square</code>.</li>
+  <li>The <code>.btn</code> link changes colour on hover.</li>
+</ul>
+<figure>
+  <img src="screenshots/task3.png" alt="Screenshot of Task 3 tribute page">
+  <figcaption>Figure 3 — Task 3, tribute page for Nikola Tesla.</figcaption>
+</figure>
+
+<h2>Task 4 — Table and form</h2>
+<p>
+  The page shows a grade table and a feedback form. The table has three
+  columns and four data rows; one name cell is merged with
+  <code>rowspan="2"</code> because the student has two subjects, and the footer
+  merges two cells with <code>colspan="2"</code>.
+</p>
+<h3>CSS used — table</h3>
+<ul>
+  <li><code>border-collapse: collapse</code> so neighbouring cells share one border.</li>
+  <li>A background colour on <code>th</code>, borders and padding on every cell,
+      text centred.</li>
+  <li><code>tbody tr:nth-child(even)</code> gives alternating row colours.</li>
+  <li><code>tr.highlight-row</code> marks one row in yellow. It is written with
+      the element name in front so that its specificity (0,1,1) is not lower
+      than the <code>nth-child</code> rule above it.</li>
+  <li>The heading above the table is styled through the ID
+      <code>#table-heading</code>.</li>
+</ul>
+<h3>CSS used — form</h3>
+<ul>
+  <li>The form has a fixed width of 380&nbsp;px and <code>margin: 0 auto</code>.</li>
+  <li>Background colour, padding and <code>border-radius: 12px</code> on the container.</li>
+  <li>Labels are bold; inputs, the dropdown and the textarea share the same
+      width and spacing.</li>
+  <li>The submit button has a background colour, rounded corners and a hover effect.</li>
+  <li>The page uses the ID <code>#feedback-form</code> and the class
+      <code>.feedback</code>.</li>
+</ul>
+<figure>
+  <img src="screenshots/task4.png" alt="Screenshot of Task 4 table and form">
+  <figcaption>Figure 4 — Task 4, styled table and feedback form.</figcaption>
+</figure>
+
+<h2>Conclusion</h2>
+<p>
+  While working on this assignment I practised the structure of an HTML
+  document, the three kinds of CSS selectors and the difference in their
+  specificity, the box model, floats and positioning, styling of tables and
+  forms, and making a layout adapt to small screens with media queries. The
+  project is version-controlled with Git and published online.
+</p>
+
+</body>
+</html>
