@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4 — Table and Form</title>
+  <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+
+  <!-- ===== Navigation bar ===== -->
+  <div class="nav">
+    <a href="index.html">Task 1</a>
+    <a href="task2.html">Task 2</a>
+    <a href="exercise1/index.html">Task 3</a>
+    <a class="active" href="task4.html">Task 4</a>
+  </div>
+
+  <!-- ===== Table ===== -->
+  <h1 id="table-heading">Student grades</h1>
+
+  <table class="grades">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- one student, two subjects -> the name cell is merged -->
+        <td rowspan="2">Aizhan Serikova</td>
+        <td>Mathematics</td>
+        <td>92</td>
+      </tr>
+      <tr>
+        <td>Physics</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <td>Dias Nurlanov</td>
+        <td>Chemistry</td>
+        <td>75</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>Yersaiyn Taubay</td>
+        <td>Web Technologies</td>
+        <td>95</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <!-- two cells merged into one -->
+        <td colspan="2">Average grade</td>
+        <td>87.5</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- ===== Form ===== -->
+  <h1 id="form-heading">Feedback form</h1>
+
+  <form class="feedback" id="feedback-form" action="#" method="post">
+
+    <label for="name">Full name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+    <label for="email">Email address</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="role">Your role</label>
+    <select id="role" name="role">
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+      <option value="other">Other</option>
+    </select>
+
+    <p class="question">Did you find this website useful?</p>
+    <div class="radio-group">
+      <label class="radio-label">
+        <input type="radio" name="useful" value="yes" checked> Yes
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="useful" value="no"> No
+      </label>
+    </div>
+
+    <label for="comments">Comments</label>
+    <textarea id="comments" name="comments" rows="5"
+              placeholder="Write your feedback here"></textarea>
+
+    <button type="submit" class="submit-btn">Send feedback</button>
+  </form>
+
+  <footer class="footer">
+    <p>&copy; 2026 Yersaiyn Taubay — Astana IT University</p>
+  </footer>
+
+</body>
+</html>

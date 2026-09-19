@@ -1,0 +1,118 @@
+/* Task 2 — layout with div + float only (no flexbox, no grid) */
+
+body {
+  margin: 0;
+  background-color: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f2430;
+}
+
+/* ---------- Header ---------- */
+#site-title {
+  background-color: #3b5bdb;
+  color: #ffffff;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* ---------- Navigation bar ---------- */
+.nav {
+  background-color: #1f2430;
+  padding: 0.6rem 1.25rem;
+  text-align: center;
+}
+
+.nav a {
+  display: inline-block;
+  color: #dfe3ee;
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  margin: 0 0.15rem;
+  border-radius: 4px;
+}
+
+.nav a:hover {
+  background-color: #3b5bdb;
+  color: #ffffff;
+}
+
+.nav a.active {
+  background-color: #ffffff;
+  color: #1f2430;
+}
+
+/* ---------- Two columns with float ---------- */
+.wrapper {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.sidebar {
+  float: left;                    /* left column */
+  width: 28%;
+  background-color: #ffffff;
+  border: 1px solid #dfe3ee;
+  border-top: 4px solid #3b5bdb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.aside {
+  float: right;                   /* right column */
+  width: 68%;
+  background-color: #ffffff;
+  border: 1px solid #dfe3ee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  padding: 1rem 1.25rem;
+  box-sizing: border-box;
+}
+
+/* clears the floats so the footer does not slide up */
+.clear {
+  clear: both;
+}
+
+.sidebar h3,
+.aside h2 {
+  margin-top: 0;
+  color: #3b5bdb;
+}
+
+.sidebar ul {
+  list-style: square;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #1f2430;
+  color: #dfe3ee;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Small screens: stop floating ---------- */
+@media (max-width: 600px) {
+  .sidebar,
+  .aside {
+    float: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

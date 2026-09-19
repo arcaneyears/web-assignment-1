@@ -1,0 +1,175 @@
+/* Task 4 — table and form */
+
+body {
+  margin: 0;
+  background-color: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f2430;
+}
+
+/* ---------- Navigation bar ---------- */
+.nav {
+  background-color: #1f2430;
+  padding: 0.6rem 1rem;
+  text-align: center;
+}
+
+.nav a {
+  display: inline-block;
+  color: #dfe3ee;
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  margin: 0 0.15rem;
+  border-radius: 4px;
+}
+
+.nav a:hover {
+  background-color: #3b5bdb;
+  color: #ffffff;
+}
+
+.nav a.active {
+  background-color: #ffffff;
+  color: #1f2430;
+}
+
+/* ---------- Headings (ID selectors) ---------- */
+#table-heading,
+#form-heading {
+  text-align: center;
+  color: #3b5bdb;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Table ---------- */
+.grades {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;     /* single shared border between cells */
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.grades th,
+.grades td {
+  border: 1px solid #b9c0d4;     /* border on every cell */
+  padding: 0.75rem 1rem;         /* room around the text */
+  text-align: center;
+}
+
+.grades th {
+  background-color: #3b5bdb;     /* header background */
+  color: #ffffff;
+}
+
+/* alternate row colours */
+.grades tbody tr:nth-child(even) {
+  background-color: #eef1fb;
+}
+
+/* one row picked out with a class.
+   written as tr.highlight-row so it is not overridden by the rule above */
+.grades tbody tr.highlight-row {
+  background-color: #fff3bf;
+  font-weight: bold;
+}
+
+.grades tfoot td {
+  background-color: #e7ecfd;
+  font-weight: bold;
+}
+
+/* ---------- Form ---------- */
+.feedback {
+  width: 380px;
+  max-width: 90%;
+  margin: 0 auto 3rem;           /* centres the form */
+  background-color: #ffffff;
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;           /* rounded corners */
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feedback label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* same width and spacing for every field */
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback select,
+.feedback textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.7rem;
+  margin-bottom: 1.1rem;
+  border: 1px solid #c3cadd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.feedback input:focus,
+.feedback select:focus,
+.feedback textarea:focus {
+  outline: none;
+  border-color: #3b5bdb;
+}
+
+.feedback textarea {
+  resize: vertical;
+}
+
+.question {
+  font-weight: bold;
+  margin: 0 0 0.4rem;
+}
+
+.radio-group {
+  margin-bottom: 1.1rem;
+}
+
+.radio-label {
+  display: inline-block;         /* Yes and No stay on one line */
+  font-weight: normal;
+  margin-right: 1.2rem;
+}
+
+/* ---------- Submit button ---------- */
+.submit-btn {
+  width: 100%;
+  background-color: #3b5bdb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1c3aa9;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #1f2430;
+  color: #dfe3ee;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}

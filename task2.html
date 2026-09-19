@@ -3,40 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 2 — Coming soon</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Task 2 — Simple webpage layout</title>
+  <link rel="stylesheet" href="task2.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="index.html">Yersaiyn<span>.dev</span></a>
-      <ul class="nav-links">
-        <li><a class="nav-link" href="index.html">Task 1</a></li>
-        <li><a class="nav-link active" href="task2.html">Task 2</a></li>
+  <!-- ===== Header ===== -->
+  <div class="header">
+    <h1 id="site-title">My Web Technologies Course</h1>
+  </div>
+
+  <!-- ===== Navigation bar ===== -->
+  <div class="nav">
+    <a href="index.html">Task 1</a>
+    <a class="active" href="task2.html">Task 2</a>
+    <a href="exercise1/index.html">Task 3</a>
+    <a href="task4.html">Task 4</a>
+  </div>
+
+  <!-- ===== Two column area ===== -->
+  <div class="wrapper">
+
+    <!-- left column -->
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li>HTML basics</li>
+        <li>CSS selectors</li>
+        <li>Box model</li>
+        <li>Floats and positioning</li>
       </ul>
-    </nav>
-  </header>
+    </div>
 
-  <main class="container">
-    <section class="hero">
-      <h1 id="page-title">Task 2</h1>
-      <p class="subtitle">This part of the assignment has not been published yet.</p>
-    </section>
-
-    <section class="card">
-      <h2>In progress</h2>
+    <!-- right column -->
+    <div class="aside">
+      <h2>About this layout</h2>
       <p>
-        The page for the second task will appear here once it is finished.
-        In the meantime you can go back to the first task.
+        This page is built only with <code>&lt;div&gt;</code> elements and CSS
+        floats. There is no flexbox and no grid here. The menu on the left is
+        floated to the left side, the content block is floated to the right,
+        and an empty block with the class <code>clear</code> stops the floating
+        before the footer.
       </p>
-      <p><a href="index.html">&larr; Back to Task 1</a></p>
-    </section>
-  </main>
+      <p>
+        Each section has its own background colour, padding, border and a soft
+        box-shadow, so the blocks are easy to tell apart. On screens narrower
+        than 600 pixels the floats are turned off and the two columns are shown
+        one under another.
+      </p>
+    </div>
 
-  <footer class="site-footer">
+    <!-- stops the floats -->
+    <div class="clear"></div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <div class="footer">
     <p>&copy; 2026 Yersaiyn Taubay — Astana IT University</p>
-  </footer>
+  </div>
 
 </body>
 </html>
