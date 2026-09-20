@@ -85,6 +85,12 @@ body {
 }
 
 /* ---------- Form ---------- */
+
+/* the form itself is selected by its ID */
+#feedback-form {
+  border-top: 4px solid #3b5bdb;
+}
+
 .feedback {
   width: 380px;
   max-width: 90%;
