@@ -1,5 +1,3 @@
-/* Task 2 — layout with div + float only (no flexbox, no grid) */
-
 body {
   margin: 0;
   background-color: #f4f6fb;
@@ -9,7 +7,6 @@ body {
   color: #1f2430;
 }
 
-/* ---------- Header ---------- */
 #site-title {
   background-color: #3b5bdb;
   color: #ffffff;
@@ -18,7 +15,6 @@ body {
   margin: 0;
 }
 
-/* ---------- Navigation bar ---------- */
 .nav {
   background-color: #1f2430;
   padding: 0.6rem 1.25rem;
@@ -44,7 +40,6 @@ body {
   color: #1f2430;
 }
 
-/* ---------- Two columns with float ---------- */
 .wrapper {
   max-width: 900px;
   margin: 1.5rem auto;
@@ -52,7 +47,7 @@ body {
 }
 
 .sidebar {
-  float: left;                    /* left column */
+  float: left;
   width: 28%;
   background-color: #ffffff;
   border: 1px solid #dfe3ee;
@@ -63,7 +58,7 @@ body {
 }
 
 .aside {
-  float: right;                   /* right column */
+  float: right;
   width: 68%;
   background-color: #ffffff;
   border: 1px solid #dfe3ee;
@@ -72,7 +67,6 @@ body {
   box-sizing: border-box;
 }
 
-/* clears the floats so the footer does not slide up */
 .clear {
   clear: both;
 }
@@ -93,7 +87,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ---------- Footer ---------- */
 .footer {
   background-color: #1f2430;
   color: #dfe3ee;
@@ -107,7 +100,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* ---------- Small screens: stop floating ---------- */
 @media (max-width: 600px) {
   .sidebar,
   .aside {
