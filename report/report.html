@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <title>Assignment #1 — Report</title>
 <style>
+  :root { color-scheme: light; }
   body { font-family: Georgia, "Times New Roman", serif; max-width: 820px;
-         margin: 0 auto; padding: 2.5rem 1.5rem; line-height: 1.6; color: #1a1a1a; }
+         margin: 0 auto; padding: 2.5rem 1.5rem; line-height: 1.6;
+         color: #1a1a1a; background-color: #ffffff; }
   h1 { font-size: 2rem; margin-bottom: 0.2rem; }
   h2 { font-size: 1.35rem; margin-top: 2.5rem; border-bottom: 2px solid #3b5bdb;
        padding-bottom: 0.25rem; color: #23305c; }
@@ -22,7 +24,12 @@
   figcaption { font-size: 0.88rem; color: #555; margin-top: 0.4rem; font-style: italic; }
   ul { padding-left: 1.3rem; }
   li { margin-bottom: 0.3rem; }
-  @media print { h2 { page-break-after: avoid; } figure { page-break-inside: avoid; } }
+  @media print {
+    body { background-color: #ffffff; color: #000000; padding: 0; }
+    h2 { page-break-after: avoid; }
+    figure { page-break-inside: avoid; }
+    th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
 </style>
 </head>
 <body>
